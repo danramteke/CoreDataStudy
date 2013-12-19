@@ -1,0 +1,11 @@
+/* 
+  StudyInCoreData.strings
+  StudyInCoreData
+
+  Created by Cyrus on 12/19/13.
+  Copyright (c) 2013 Daniel Ramteke. All rights reserved.
+*/
+"Entity/Animal" = "Animal";
+"Property/commonName" = "Common Name";
+"Property/latinName" = "Latin Name";
+"Property/numberOfLikes" = "Number of Likes";

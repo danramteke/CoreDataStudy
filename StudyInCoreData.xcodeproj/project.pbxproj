@@ -23,6 +23,10 @@
 		6E2DA5E218638D7400217B9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E2DA5E018638D7400217B9B /* InfoPlist.strings */; };
 		6E2DA5E418638D7400217B9B /* StudyInCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DA5E318638D7400217B9B /* StudyInCoreDataTests.m */; };
 		6E2DA5EF18638DE100217B9B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DA5EE18638DE100217B9B /* MainViewController.m */; };
+		6E2DA5F4186394D500217B9B /* AnimalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DA5F3186394D500217B9B /* AnimalController.m */; };
+		6E2DA5F5186394D500217B9B /* AnimalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DA5F3186394D500217B9B /* AnimalController.m */; };
+		6E2DA5F718639BB800217B9B /* StudyInCoreData.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E2DA5F618639BB800217B9B /* StudyInCoreData.strings */; };
+		6E2DA5F818639BB800217B9B /* StudyInCoreData.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E2DA5F618639BB800217B9B /* StudyInCoreData.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,9 @@
 		6E2DA5E318638D7400217B9B /* StudyInCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyInCoreDataTests.m; sourceTree = "<group>"; };
 		6E2DA5ED18638DE100217B9B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		6E2DA5EE18638DE100217B9B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6E2DA5F2186394D500217B9B /* AnimalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalController.h; sourceTree = "<group>"; };
+		6E2DA5F3186394D500217B9B /* AnimalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalController.m; sourceTree = "<group>"; };
+		6E2DA5F618639BB800217B9B /* StudyInCoreData.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = StudyInCoreData.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +129,10 @@
 				6E2DA5CA18638D7400217B9B /* AppDelegate.m */,
 				6E2DA5CF18638D7400217B9B /* Images.xcassets */,
 				6E2DA5CC18638D7400217B9B /* StudyInCoreData.xcdatamodeld */,
+				6E2DA5F1186394BB00217B9B /* Back End */,
+				6E2DA5F01863948900217B9B /* Font End */,
 				6E2DA5C118638D7400217B9B /* Supporting Files */,
-				6E2DA5ED18638DE100217B9B /* MainViewController.h */,
-				6E2DA5EE18638DE100217B9B /* MainViewController.m */,
+				6E2DA5F618639BB800217B9B /* StudyInCoreData.strings */,
 			);
 			path = StudyInCoreData;
 			sourceTree = "<group>";
@@ -156,6 +164,24 @@
 				6E2DA5E018638D7400217B9B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E2DA5F01863948900217B9B /* Font End */ = {
+			isa = PBXGroup;
+			children = (
+				6E2DA5ED18638DE100217B9B /* MainViewController.h */,
+				6E2DA5EE18638DE100217B9B /* MainViewController.m */,
+			);
+			name = "Font End";
+			sourceTree = "<group>";
+		};
+		6E2DA5F1186394BB00217B9B /* Back End */ = {
+			isa = PBXGroup;
+			children = (
+				6E2DA5F2186394D500217B9B /* AnimalController.h */,
+				6E2DA5F3186394D500217B9B /* AnimalController.m */,
+			);
+			name = "Back End";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E2DA5F718639BB800217B9B /* StudyInCoreData.strings in Resources */,
 				6E2DA5C518638D7400217B9B /* InfoPlist.strings in Resources */,
 				6E2DA5D018638D7400217B9B /* Images.xcassets in Resources */,
 			);
@@ -245,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E2DA5F818639BB800217B9B /* StudyInCoreData.strings in Resources */,
 				6E2DA5E218638D7400217B9B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +286,7 @@
 			files = (
 				6E2DA5CB18638D7400217B9B /* AppDelegate.m in Sources */,
 				6E2DA5C718638D7400217B9B /* main.m in Sources */,
+				6E2DA5F4186394D500217B9B /* AnimalController.m in Sources */,
 				6E2DA5CE18638D7400217B9B /* StudyInCoreData.xcdatamodeld in Sources */,
 				6E2DA5EF18638DE100217B9B /* MainViewController.m in Sources */,
 			);
@@ -268,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E2DA5E418638D7400217B9B /* StudyInCoreDataTests.m in Sources */,
+				6E2DA5F5186394D500217B9B /* AnimalController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
