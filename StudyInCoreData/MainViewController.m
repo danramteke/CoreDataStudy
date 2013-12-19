@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "NSObject+DRTap.h"
 
 @interface MainViewController ()
 
@@ -18,7 +19,9 @@
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
-        self.fetchController = [[NSFetchedResultsController alloc] initWithFetchRequest:[[NSFetchRequest alloc] initWithEntityName:@"Animal"]
+        NSFetchRequest* fetch = [[NSFetchRequest alloc] initWithEntityName:@"Animal"];
+        fetch.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"commonName" ascending:YES]];
+        self.fetchController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetch
                                                                    managedObjectContext:context
                                                                      sectionNameKeyPath:nil
                                                                               cacheName:@"cache-file-name"];
