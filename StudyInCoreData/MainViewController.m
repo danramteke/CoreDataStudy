@@ -14,16 +14,21 @@
 
 @implementation MainViewController
 
-- (id)init
+-(instancetype)initWithContext:(NSManagedObjectContext*)context
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
-        // Custom initialization
+        self.fetchController = [[NSFetchedResultsController alloc] initWithFetchRequest:[[NSFetchRequest alloc] initWithEntityName:@"Animal"]
+                                                                   managedObjectContext:context
+                                                                     sectionNameKeyPath:nil
+                                                                              cacheName:@"cache-file-name"];
         self.title = @"Pheasants";
     }
     return self;
 }
 
+
+                                
 - (void)viewDidLoad
 {
     [super viewDidLoad];

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UITableViewController
-
+-(instancetype)initWithContext:(NSManagedObjectContext*)context;
+@property (nonatomic, strong) NSFetchedResultsController* fetchController;
 @end
