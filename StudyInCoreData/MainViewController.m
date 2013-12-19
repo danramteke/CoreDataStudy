@@ -25,7 +25,7 @@
                                                                    managedObjectContext:context
                                                                      sectionNameKeyPath:nil
                                                                               cacheName:@"cache-file-name"];
-        self.title = @"Pheasants";
+        self.title = @"Animal List";
     }
     return self;
 }
@@ -55,14 +55,15 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 
-    // Return the number of sections.
-    return 1;
+    return [[self.fetchController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return 1;
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
+    
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,7 +72,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = @"Here is CELL";
+    cell.textLabel.text = @"asdf";//[[self.fetchController objectAtIndexPath:indexPath] commonName];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
