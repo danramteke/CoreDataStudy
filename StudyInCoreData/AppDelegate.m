@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -17,8 +18,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    self.mainViewController = [[MainViewController alloc] init];
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
     [self.window makeKeyAndVisible];
     return YES;
 }

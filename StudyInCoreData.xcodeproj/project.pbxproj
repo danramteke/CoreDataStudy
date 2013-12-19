@@ -22,6 +22,7 @@
 		6E2DA5DA18638D7400217B9B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2DA5BE18638D7400217B9B /* CoreData.framework */; };
 		6E2DA5E218638D7400217B9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E2DA5E018638D7400217B9B /* InfoPlist.strings */; };
 		6E2DA5E418638D7400217B9B /* StudyInCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DA5E318638D7400217B9B /* StudyInCoreDataTests.m */; };
+		6E2DA5EF18638DE100217B9B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DA5EE18638DE100217B9B /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		6E2DA5DF18638D7400217B9B /* StudyInCoreDataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudyInCoreDataTests-Info.plist"; sourceTree = "<group>"; };
 		6E2DA5E118638D7400217B9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6E2DA5E318638D7400217B9B /* StudyInCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyInCoreDataTests.m; sourceTree = "<group>"; };
+		6E2DA5ED18638DE100217B9B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6E2DA5EE18638DE100217B9B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				6E2DA5CF18638D7400217B9B /* Images.xcassets */,
 				6E2DA5CC18638D7400217B9B /* StudyInCoreData.xcdatamodeld */,
 				6E2DA5C118638D7400217B9B /* Supporting Files */,
+				6E2DA5ED18638DE100217B9B /* MainViewController.h */,
+				6E2DA5EE18638DE100217B9B /* MainViewController.m */,
 			);
 			path = StudyInCoreData;
 			sourceTree = "<group>";
@@ -200,6 +205,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Daniel Ramteke";
 				TargetAttributes = {
+					6E2DA5B418638D7400217B9B = {
+						DevelopmentTeam = Z7HUA7E8W9;
+					};
 					6E2DA5D418638D7400217B9B = {
 						TestTargetID = 6E2DA5B418638D7400217B9B;
 					};
@@ -251,6 +259,7 @@
 				6E2DA5CB18638D7400217B9B /* AppDelegate.m in Sources */,
 				6E2DA5C718638D7400217B9B /* main.m in Sources */,
 				6E2DA5CE18638D7400217B9B /* StudyInCoreData.xcdatamodeld in Sources */,
+				6E2DA5EF18638DE100217B9B /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,10 +380,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StudyInCoreData/StudyInCoreData-Prefix.pch";
 				INFOPLIST_FILE = "StudyInCoreData/StudyInCoreData-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -384,10 +396,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StudyInCoreData/StudyInCoreData-Prefix.pch";
 				INFOPLIST_FILE = "StudyInCoreData/StudyInCoreData-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
