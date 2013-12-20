@@ -11,5 +11,5 @@
 @interface Animal : NSManagedObject
 @property (nonatomic, strong) NSString* commonName;
 @property (nonatomic, strong) NSString* latinName;
-@property (nonatomic) NSInteger numberOfLikes;
+@property (nonatomic, strong) NSNumber* numberOfLikes;
 @end

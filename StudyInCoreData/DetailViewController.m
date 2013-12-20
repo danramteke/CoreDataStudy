@@ -94,7 +94,7 @@ enum DetailSections {
             cell.textLabel.text = self.animal.latinName;
             break;
         case NUMBER_OF_LIKES:
-            cell.textLabel.text = [NSString stringWithFormat:@"%ld", self.animal.numberOfLikes];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@", self.animal.numberOfLikes];
             break;
             
         default:

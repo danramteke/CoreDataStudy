@@ -37,14 +37,14 @@
                                                inManagedObjectContext:self.managedObjectContext];
         newObject.commonName = @"Giraffe";
         newObject.latinName = @"Giraffalous";
-//        newObject.numberOfLikes = 3;
+        newObject.numberOfLikes = @3;
         
         Animal *newObject2 = [NSEntityDescription
                              insertNewObjectForEntityForName:@"Animal"
                              inManagedObjectContext:self.managedObjectContext];
         newObject2.commonName = @"Cow";
         newObject2.latinName = @"Vacca";
-//        newObject2.numberOfLikes = 5;
+        newObject2.numberOfLikes = @5;
         NSLog(@"count: %ld", (long)[self.animalController count]);
         [self saveContext];
         NSLog(@"count: %ld", (long)[self.animalController count]);
