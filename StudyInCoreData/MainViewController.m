@@ -27,6 +27,14 @@
                                                                      sectionNameKeyPath:nil
                                                                               cacheName:@"cacheName"];
         self.fetchController.delegate = self;
+        
+        NSError *error;
+
+        [self.fetchController performFetch:&error];
+        if (error != nil) {
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
         self.title = @"Animal List";
     }
     return self;
