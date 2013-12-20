@@ -12,7 +12,7 @@
 -(instancetype)initWithContext:(NSManagedObjectContext*)context {
     self = [super init];
     if (self) {
-        
+        self.context = context;
     }
     return self;
 }
