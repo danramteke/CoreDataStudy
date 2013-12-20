@@ -11,4 +11,5 @@
 @interface AnimalController : NSObject
 -(instancetype)initWithContext:(NSManagedObjectContext*)context;
 -(NSInteger)count;
+-(NSArray*)all;
 @end

@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.animalController = [[AnimalController alloc] initWithContext:self.managedObjectContext];
+    
     [self populateStore];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -28,17 +30,7 @@
 }
 
 -(void)populateStore {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Animal"
-                                              inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    NSError *error;
-    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    if (fetchedObjects == nil) {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-    if ([fetchedObjects count] == 0) {
+    if ([self.animalController count] == 0) {
         NSLog(@"ok inserting");
         Animal *newObject = [NSEntityDescription
                                                insertNewObjectForEntityForName:@"Animal"
@@ -53,7 +45,11 @@
         newObject2.commonName = @"Cow";
         newObject2.latinName = @"Vacca";
 //        newObject2.numberOfLikes = 5;
+        NSLog(@"count: %ld", (long)[self.animalController count]);
         [self saveContext];
+        NSLog(@"count: %ld", (long)[self.animalController count]);
+    } else {
+        NSLog(@"not inserting cuz i found %ld objects", [self.animalController count]);
     }
 }
 

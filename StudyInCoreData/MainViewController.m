@@ -10,7 +10,7 @@
 #import "NSObject+DRTap.h"
 
 @interface MainViewController ()
-
+@property (nonatomic, weak) NSManagedObjectContext* context;
 @end
 
 @implementation MainViewController
@@ -19,12 +19,13 @@
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
+        self.context = context;
         NSFetchRequest* fetch = [[NSFetchRequest alloc] initWithEntityName:@"Animal"];
         fetch.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"commonName" ascending:YES]];
         self.fetchController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetch
-                                                                   managedObjectContext:context
+                                                                   managedObjectContext:self.context
                                                                      sectionNameKeyPath:nil
-                                                                              cacheName:@"cache-file-name"];
+                                                                              cacheName:nil];
         self.title = @"Animal List";
     }
     return self;
@@ -54,14 +55,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
-    return [[self.fetchController sections] count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
+    
+    NSLog(@"objectS: %ld", [[self.fetchController fetchedObjects] count]);
+    return [[self.fetchController fetchedObjects] count];
+
     
     
 }
