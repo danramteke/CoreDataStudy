@@ -8,6 +8,8 @@
 
 #import "MainViewController.h"
 #import "NSObject+DRTap.h"
+#import "Animal.h"
+#import "DetailViewController.h"
 
 @interface MainViewController ()
 @property (nonatomic, weak) NSManagedObjectContext* context;
@@ -69,7 +71,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"objectS: %ld", [[self.fetchController fetchedObjects] count]);
     return [[self.fetchController fetchedObjects] count];
 }
 
@@ -84,13 +85,16 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self.navigationController pushViewController:[[DetailViewController alloc] initWithAnimal:[self.fetchController objectAtIndexPath:indexPath]] animated:YES];
 }
 
 
 #pragma Configure
 
 -(void)configureCell:(UITableViewCell*)cell atIndexPath:(NSIndexPath*)indexPath {
-    cell.textLabel.text=[NSString stringWithFormat:@"asdf %ld", indexPath.row];
+    Animal* animal = [self.fetchController objectAtIndexPath:indexPath];
+    cell.textLabel.text = animal.commonName;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 

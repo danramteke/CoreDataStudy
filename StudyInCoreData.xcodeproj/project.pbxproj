@@ -30,6 +30,8 @@
 		6E2DA5F5186394D500217B9B /* AnimalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DA5F3186394D500217B9B /* AnimalController.m */; };
 		6E2DA5F718639BB800217B9B /* StudyInCoreData.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E2DA5F618639BB800217B9B /* StudyInCoreData.strings */; };
 		6E2DA5F818639BB800217B9B /* StudyInCoreData.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E2DA5F618639BB800217B9B /* StudyInCoreData.strings */; };
+		6E2DECF01864E883001DBB6E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DECEF1864E883001DBB6E /* DetailViewController.m */; };
+		6E2DECF11864E883001DBB6E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DECEF1864E883001DBB6E /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		6E2DA5F2186394D500217B9B /* AnimalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalController.h; sourceTree = "<group>"; };
 		6E2DA5F3186394D500217B9B /* AnimalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalController.m; sourceTree = "<group>"; };
 		6E2DA5F618639BB800217B9B /* StudyInCoreData.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = StudyInCoreData.strings; sourceTree = "<group>"; };
+		6E2DECEE1864E883001DBB6E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		6E2DECEF1864E883001DBB6E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		ED59BC50EAC84FA696F53609 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50BE25154AA4C728C923024 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -181,6 +185,8 @@
 			children = (
 				6E2DA5ED18638DE100217B9B /* MainViewController.h */,
 				6E2DA5EE18638DE100217B9B /* MainViewController.m */,
+				6E2DECEE1864E883001DBB6E /* DetailViewController.h */,
+				6E2DECEF1864E883001DBB6E /* DetailViewController.m */,
 			);
 			name = "Font End";
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 				21D8F5A418649DF0006C0796 /* Animal.m in Sources */,
 				6E2DA5CE18638D7400217B9B /* StudyInCoreData.xcdatamodeld in Sources */,
 				6E2DA5EF18638DE100217B9B /* MainViewController.m in Sources */,
+				6E2DECF01864E883001DBB6E /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +354,7 @@
 				21D8F5A518649DF0006C0796 /* Animal.m in Sources */,
 				6E2DA5E418638D7400217B9B /* StudyInCoreDataTests.m in Sources */,
 				6E2DA5F5186394D500217B9B /* AnimalController.m in Sources */,
+				6E2DECF11864E883001DBB6E /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
