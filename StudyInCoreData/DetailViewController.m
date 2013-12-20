@@ -28,8 +28,13 @@ enum DetailSections {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         self.animal = animal;
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editMode)];
     }
     return self;
+}
+
+-(void)editMode {
+    NSLog(@"starting edit mode");
 }
 
 - (void)viewDidLoad
@@ -37,12 +42,6 @@ enum DetailSections {
     [super viewDidLoad];
 
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
