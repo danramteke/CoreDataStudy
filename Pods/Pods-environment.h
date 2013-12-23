@@ -6,6 +6,12 @@
 // project.
 
 
+// DRAutolayout
+#define COCOAPODS_POD_AVAILABLE_DRAutolayout
+#define COCOAPODS_VERSION_MAJOR_DRAutolayout 1
+#define COCOAPODS_VERSION_MINOR_DRAutolayout 2
+#define COCOAPODS_VERSION_PATCH_DRAutolayout 0
+
 // DRTap
 #define COCOAPODS_POD_AVAILABLE_DRTap
 #define COCOAPODS_VERSION_MAJOR_DRTap 1

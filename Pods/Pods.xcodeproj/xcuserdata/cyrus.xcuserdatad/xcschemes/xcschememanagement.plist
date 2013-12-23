@@ -4,45 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-DRAutolayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-DRTap.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>234D79D646DB43EA89380F46</key>
+		<key>4D69DC00D1674604AD79230A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5EBDC5BEF81B44FA93EFC077</key>
+		<key>57325636B7624E9F85303083</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5FB14BAEFCE74979985E5872</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A2B75FC5CC51439B935627A4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B6B58E9455FF43E99BEE111B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D9A5D1BD04484D5F8EEDC599</key>
+		<key>777374E294064B448D6057BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

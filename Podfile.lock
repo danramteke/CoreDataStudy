@@ -1,10 +1,13 @@
 PODS:
+  - DRAutolayout (1.2)
   - DRTap (1.0)
 
 DEPENDENCIES:
+  - DRAutolayout
   - DRTap
 
 SPEC CHECKSUMS:
+  DRAutolayout: a93a1412039029bdfca159636e853bd0ab1fb396
   DRTap: 9300ca5c882d223a1ef72544a0b665e5d87a02b6
 
-COCOAPODS: 0.27.1
+COCOAPODS: 0.28.0
