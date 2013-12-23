@@ -33,8 +33,8 @@
     if ([self.animalController count] == 0) {
         NSLog(@"ok inserting");
         Animal *newObject = [NSEntityDescription
-                                               insertNewObjectForEntityForName:@"Animal"
-                                               inManagedObjectContext:self.managedObjectContext];
+                             insertNewObjectForEntityForName:@"Animal"
+                             inManagedObjectContext:self.managedObjectContext];
         newObject.commonName = @"Giraffe";
         newObject.latinName = @"Giraffalous";
         newObject.numberOfLikes = @3;
@@ -45,9 +45,7 @@
         newObject2.commonName = @"Cow";
         newObject2.latinName = @"Vacca";
         newObject2.numberOfLikes = @5;
-        NSLog(@"count: %ld", (long)[self.animalController count]);
         [self saveContext];
-        NSLog(@"count: %ld", (long)[self.animalController count]);
     } else {
         NSLog(@"not inserting cuz i found %ld objects", [self.animalController count]);
     }
