@@ -47,7 +47,7 @@
         newObject2.numberOfLikes = @5;
         [self saveContext];
     } else {
-        NSLog(@"not inserting cuz i found %ld objects", [self.animalController count]);
+        NSLog(@"not inserting cuz i found %ld objects", (long)[self.animalController count]);
     }
 }
 

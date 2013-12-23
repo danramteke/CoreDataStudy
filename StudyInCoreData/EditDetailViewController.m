@@ -39,7 +39,7 @@
 
 -(NSString*)textForSection:(NSInteger)section {
     NSString* s = ((EditDetailCell*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section]]).textField.text;
-    NSLog(@"got text for section %ld and it is %@", section, s);
+    NSLog(@"got text for section %ld and it is %@", (long)(long)section, s);
     return s;
 }
 
