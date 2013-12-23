@@ -53,7 +53,9 @@
     }
 }
 
-
+-(void)applicationWillResignActive:(UIApplication *)application{
+    [self saveContext];
+}
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
