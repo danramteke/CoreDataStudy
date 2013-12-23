@@ -34,6 +34,8 @@
 		6E2DECF11864E883001DBB6E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DECEF1864E883001DBB6E /* DetailViewController.m */; };
 		6E2DECF41864F13E001DBB6E /* EditDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DECF31864F13E001DBB6E /* EditDetailViewController.m */; };
 		6E2DECF51864F13E001DBB6E /* EditDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DECF31864F13E001DBB6E /* EditDetailViewController.m */; };
+		6E2DECF918689CDB001DBB6E /* EditDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DECF818689CDB001DBB6E /* EditDetailCell.m */; };
+		6E2DECFA18689CDB001DBB6E /* EditDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DECF818689CDB001DBB6E /* EditDetailCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		6E2DECF21864F13E001DBB6E /* EditDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDetailViewController.h; sourceTree = "<group>"; };
 		6E2DECF31864F13E001DBB6E /* EditDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDetailViewController.m; sourceTree = "<group>"; };
 		6E2DECF6186893F2001DBB6E /* SectionsEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionsEnum.h; sourceTree = "<group>"; };
+		6E2DECF718689CDB001DBB6E /* EditDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDetailCell.h; sourceTree = "<group>"; };
+		6E2DECF818689CDB001DBB6E /* EditDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDetailCell.m; sourceTree = "<group>"; };
 		ED59BC50EAC84FA696F53609 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50BE25154AA4C728C923024 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -195,6 +199,8 @@
 				6E2DECEF1864E883001DBB6E /* DetailViewController.m */,
 				6E2DECF21864F13E001DBB6E /* EditDetailViewController.h */,
 				6E2DECF31864F13E001DBB6E /* EditDetailViewController.m */,
+				6E2DECF718689CDB001DBB6E /* EditDetailCell.h */,
+				6E2DECF818689CDB001DBB6E /* EditDetailCell.m */,
 			);
 			name = "Font End";
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 				6E2DA5C718638D7400217B9B /* main.m in Sources */,
 				6E2DA5F4186394D500217B9B /* AnimalController.m in Sources */,
 				21D8F5A418649DF0006C0796 /* Animal.m in Sources */,
+				6E2DECF918689CDB001DBB6E /* EditDetailCell.m in Sources */,
 				6E2DA5CE18638D7400217B9B /* StudyInCoreData.xcdatamodeld in Sources */,
 				6E2DECF41864F13E001DBB6E /* EditDetailViewController.m in Sources */,
 				6E2DA5EF18638DE100217B9B /* MainViewController.m in Sources */,
@@ -364,6 +371,7 @@
 				6E2DA5E418638D7400217B9B /* StudyInCoreDataTests.m in Sources */,
 				6E2DA5F5186394D500217B9B /* AnimalController.m in Sources */,
 				6E2DECF51864F13E001DBB6E /* EditDetailViewController.m in Sources */,
+				6E2DECFA18689CDB001DBB6E /* EditDetailCell.m in Sources */,
 				6E2DECF11864E883001DBB6E /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
