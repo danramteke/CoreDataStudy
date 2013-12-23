@@ -7,6 +7,7 @@
 //
 
 #import "EditDetailViewController.h"
+#import "SectionsEnum.h"
 
 @interface EditDetailViewController ()
 
@@ -14,24 +15,25 @@
 
 @implementation EditDetailViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithAnimal:(Animal*)animal
 {
-    self = [super initWithStyle:style];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
-        // Custom initialization
+        self.animal = animal;
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(exitEditMode)];
     }
     return self;
+}
+
+-(void)exitEditMode {
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,28 +44,62 @@
 
 #pragma mark - Table view data source
 
+#pragma mark - Table view data source
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
+
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case COMMON_NAME:
+            return @"Common Name";
+            break;
+        case LATIN_NAME:
+            return @"Latin Name";
+            break;
+        case NUMBER_OF_LIKES:
+            return @"Number of Likes";
+            break;
+            
+        default:
+            return @"";
+            break;
+    }
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
+    [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
+}
+
+-(void)configureCell:(UITableViewCell*)cell atIndexPath:(NSIndexPath*)indexPath {
+    
+    switch (indexPath.section) {
+        case COMMON_NAME:
+            cell.textLabel.text = self.animal.commonName;
+            break;
+        case LATIN_NAME:
+            cell.textLabel.text = self.animal.latinName;
+            break;
+        case NUMBER_OF_LIKES:
+            cell.textLabel.text = [NSString stringWithFormat:@"%@", self.animal.numberOfLikes];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 /*

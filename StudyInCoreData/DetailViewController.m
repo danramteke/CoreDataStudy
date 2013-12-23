@@ -7,15 +7,10 @@
 //
 
 #import "DetailViewController.h"
+#import "SectionsEnum.h"
+#import "EditDetailViewController.h"
 
 
-
-enum DetailSections {
-    COMMON_NAME = 0,
-    LATIN_NAME = 1,
-    NUMBER_OF_LIKES = 2
-    
-    };
 
 @interface DetailViewController ()
 @property (weak, nonatomic) Animal* animal;
@@ -34,7 +29,7 @@ enum DetailSections {
 }
 
 -(void)editMode {
-    NSLog(@"starting edit mode");
+    [self.navigationController pushViewController:[[EditDetailViewController alloc] initWithAnimal:self.animal] animated:NO];
 }
 
 - (void)viewDidLoad

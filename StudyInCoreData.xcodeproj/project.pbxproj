@@ -76,6 +76,7 @@
 		6E2DECEF1864E883001DBB6E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		6E2DECF21864F13E001DBB6E /* EditDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDetailViewController.h; sourceTree = "<group>"; };
 		6E2DECF31864F13E001DBB6E /* EditDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDetailViewController.m; sourceTree = "<group>"; };
+		6E2DECF6186893F2001DBB6E /* SectionsEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionsEnum.h; sourceTree = "<group>"; };
 		ED59BC50EAC84FA696F53609 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50BE25154AA4C728C923024 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -187,6 +188,7 @@
 		6E2DA5F01863948900217B9B /* Font End */ = {
 			isa = PBXGroup;
 			children = (
+				6E2DECF6186893F2001DBB6E /* SectionsEnum.h */,
 				6E2DA5ED18638DE100217B9B /* MainViewController.h */,
 				6E2DA5EE18638DE100217B9B /* MainViewController.m */,
 				6E2DECEE1864E883001DBB6E /* DetailViewController.h */,

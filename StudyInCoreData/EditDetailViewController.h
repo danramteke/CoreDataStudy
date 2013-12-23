@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Animal.h"
 
 @interface EditDetailViewController : UITableViewController
+- (id)initWithAnimal:(Animal*)animal;
 
+@property (nonatomic, weak) Animal* animal;
 @end
