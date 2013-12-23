@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "57325636B7624E9F85303083"
+               BlueprintIdentifier = "46C76150326E4173A95FA90F"
                BuildableName = "libPods-DRTap.a"
                BlueprintName = "Pods-DRTap"
                ReferencedContainer = "container:Pods.xcodeproj">
