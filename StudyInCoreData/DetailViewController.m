@@ -69,6 +69,14 @@
     }
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [self.tableView reloadRowsAtIndexPaths:@[
+                                             [NSIndexPath indexPathForRow:0 inSection:COMMON_NAME],
+                                             [NSIndexPath indexPathForRow:0 inSection:LATIN_NAME],
+                                             [NSIndexPath indexPathForRow:0 inSection:NUMBER_OF_LIKES],
+                                             ] withRowAnimation:UITableViewRowAnimationNone];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -76,6 +84,10 @@
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
+}
+
+-(NSIndexPath*)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    return nil;
 }
 
 -(void)configureCell:(UITableViewCell*)cell atIndexPath:(NSIndexPath*)indexPath {

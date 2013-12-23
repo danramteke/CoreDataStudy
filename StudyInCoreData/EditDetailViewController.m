@@ -8,6 +8,7 @@
 
 #import "EditDetailViewController.h"
 #import "SectionsEnum.h"
+#import "EditDetailCell.h"
 
 @interface EditDetailViewController ()
 
@@ -26,14 +27,27 @@
 }
 
 -(void)exitEditMode {
+    [self saveNewValues];
     [self.navigationController popViewControllerAnimated:NO];
+}
+
+-(void)saveNewValues {
+    self.animal.commonName = [self textForSection:COMMON_NAME];
+    self.animal.latinName = [self textForSection:LATIN_NAME];
+    self.animal.numberOfLikes = [NSNumber numberWithInteger:[[self textForSection:NUMBER_OF_LIKES] integerValue]];
+}
+
+-(NSString*)textForSection:(NSInteger)section {
+    NSString* s = ((EditDetailCell*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section]]).textField.text;
+    NSLog(@"got text for section %ld and it is %@", section, s);
+    return s;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    [self.tableView registerClass:[EditDetailCell class] forCellReuseIdentifier:@"Cell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,31 +86,32 @@
     }
 }
 
-
 -(NSIndexPath*)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [((EditDetailCell*)[self.tableView cellForRowAtIndexPath:indexPath]).textField becomeFirstResponder];
     return nil;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    EditDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
 
--(void)configureCell:(UITableViewCell*)cell atIndexPath:(NSIndexPath*)indexPath {
+-(void)configureCell:(EditDetailCell*)cell atIndexPath:(NSIndexPath*)indexPath {
     
     switch (indexPath.section) {
         case COMMON_NAME:
-            cell.textLabel.text = self.animal.commonName;
+            cell.textField.text = self.animal.commonName;
             break;
         case LATIN_NAME:
-            cell.textLabel.text = self.animal.latinName;
+            cell.textField.text = self.animal.latinName;
             break;
         case NUMBER_OF_LIKES:
-            cell.textLabel.text = [NSString stringWithFormat:@"%@", self.animal.numberOfLikes];
+            cell.textField.text = [NSString stringWithFormat:@"%@", self.animal.numberOfLikes];
             break;
             
         default:
